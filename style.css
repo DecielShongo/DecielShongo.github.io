@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #050303;
+}
+
+.main-background {
+    width: 100vw;
+    background-image: url("assets/24.jpg");
+}
+
+.spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+}
+
+.wave-background {
+    background-image: url("assets/waves.svg");
+}
