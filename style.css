@@ -1,7 +1,13 @@
+:root {
+    --color-blue: #0793E1;
+    --color-purple: #7E2FE0;
+    --color-black: #050303;
+}
+
 body{
     margin: 0;
     padding: 0;
-    background-color: #050303;
+    background-color: var(--color-black);
 }
 
 .main-background {
@@ -15,5 +21,6 @@ body{
 }
 
 .wave-background {
-    background-image: url("assets/waves.svg");
+    background-image: url("assets/waves2.svg");
 }
+
