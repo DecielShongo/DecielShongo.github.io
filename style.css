@@ -42,21 +42,28 @@ nav {
     transition: var(--transition-medium);
 }
 
-nav div {
+nav button {
     border-radius: var(--border-radius-small);
     font-size: var(--font-small);
     transition: var(--transition-fast);
+    background-color: transparent;
+    border-width: 0px;
+    font-family: inherit;
 }
 
-nav div:hover {
+nav button:hover {
     box-shadow:  -4px -4px 10px var(--color-purple-light),  5px 5px 10px var(--color-blue-dark);
     color: var(--color-blue-dark);
     cursor: pointer;
 }
 
-/* #Deciel {
-    width: 20%;
-} */
+nav button:active 
+{
+    box-shadow:  inset -4px -4px 10px var(--color-purple-light), inset 5px 5px 10px var(--color-blue-dark);
+
+}
+
+
 
 body{
     margin: 0;
@@ -100,4 +107,5 @@ section {
 .wave-background {
     background-image: url("assets/waves2.svg");
 } */
+
 
