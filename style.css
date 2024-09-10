@@ -12,6 +12,9 @@
     --font-small: 40px;
     --border-radius-medium: 30px;
     --border-radius-small: 5px;
+    --transition-fast: all 0.1s ease-in-out;
+    --transition-medium: all 0.2s ease-in-out;
+    --transition-slow: all 0.3s ease-in-out;
 
     
 }
@@ -36,22 +39,24 @@ nav {
     height: 100px;
     background-image: linear-gradient(var(--color-purple),var(--color-blue));
     z-index: 1;
+    transition: var(--transition-medium);
 }
 
 nav div {
     border-radius: var(--border-radius-small);
     font-size: var(--font-small);
-    transition: all 0.1s ease-in-out;
+    transition: var(--transition-fast);
 }
 
 nav div:hover {
     box-shadow:  -4px -4px 10px var(--color-purple-light),  5px 5px 10px var(--color-blue-dark);
-
+    color: var(--color-blue-dark);
+    cursor: pointer;
 }
 
-#Deciel {
+/* #Deciel {
     width: 20%;
-}
+} */
 
 body{
     margin: 0;
