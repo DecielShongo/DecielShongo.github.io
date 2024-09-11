@@ -40,9 +40,10 @@ nav {
     background-image: linear-gradient(var(--color-purple),var(--color-blue));
     z-index: 1;
     transition: var(--transition-medium);
+    box-shadow: 5px 8px 10px rgba(0,0,0,0.2);
 }
 
-nav button {
+.primary {
     border-radius: var(--border-radius-small);
     font-size: var(--font-small);
     transition: var(--transition-fast);
@@ -51,16 +52,15 @@ nav button {
     font-family: inherit;
 }
 
-nav button:hover {
-    box-shadow:  -4px -4px 10px var(--color-purple-light),  5px 5px 10px var(--color-blue-dark);
+.primary:hover {
+    box-shadow:  -4px -4px 10px var(--color-blue),  5px 5px 10px var(--color-purple);
     color: var(--color-blue-dark);
     cursor: pointer;
 }
 
-nav button:active 
+.primary:active 
 {
-    box-shadow:  inset -4px -4px 10px var(--color-purple-light), inset 5px 5px 10px var(--color-blue-dark);
-
+    box-shadow:  inset -4px -4px 10px var(--color-blue), inset 5px 5px 10px var(--color-purple);
 }
 
 
@@ -99,13 +99,40 @@ section {
     border-color: var(--color-blue);
 }
 
-/* .spacer {
-    aspect-ratio: 960/300;
-    width: 100%;
+footer {
+    scroll-snap-align: start;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(var(--color-blue), var(--color-purple));
 }
 
-.wave-background {
-    background-image: url("assets/waves2.svg");
-} */
+#contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
 
+#contact button {
+    border-radius: var(--border-radius-medium);
+    width: 150px;
+    height: 150px;
+    box-shadow:  -4px -4px 10px var(--color-purple-light),  5px 5px 10px var(--color-blue-dark);
+}
+
+#contact button:active {
+    box-shadow:  inset -4px -4px 10px var(--color-purple-light), inset 5px 5px 10px var(--color-blue-dark);
+}
+
+#contact-spacer{
+    background-color: var(--color-black);
+    border-style: none;
+}
+
+.primary img {
+    width: 100%;
+    height: 100%;
+    fill: white;
+}
 
