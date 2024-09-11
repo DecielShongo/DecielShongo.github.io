@@ -8,10 +8,10 @@
 </head>
 <body>
     <nav>
-        <button onclick="navigate(event)">Deciel Shongo</button>
-        <button onclick="navigate(event)">Skills</button>
-        <button onclick="navigate(event)">About Me</button>
-        <button onclick="navigate(event)">Contact</button>
+        <button class="primary" onclick="navigate(event)">Deciel Shongo</button>
+        <button class="primary" onclick="navigate(event)">Skills</button>
+        <button class="primary" onclick="navigate(event)">About Me</button>
+        <button class="primary" onclick="navigate(event)">Contact</button>
     </nav>
     <section id="start">
         <img class="main-background" src="assets/24.jpg" alt="abstract background">
@@ -27,7 +27,21 @@
         <img class="main-background" src="assets/24.jpg" alt="abstract background">
 
     </section>
-<footer></footer>
+    <footer>
+        <div class="spacer" id="contact-spacer">Contact</div>
+        <section id="contact">
+            <button class="primary">
+                <!-- TODO: Create LinkedIN Account -->
+                <img src="assets/linkedin.svg" alt="linkedin">
+            </button>
+            <button class="primary">
+                <a href="mailto: shongo021@gmail.com"><img src="assets/gmail.svg" alt="gmail"></a>
+            </button>
+            <button class="primary">
+                <a href="https://github.com/DecielShongo"><img src="assets/github.svg" alt="github"></a>
+            </button>
+        </section>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
