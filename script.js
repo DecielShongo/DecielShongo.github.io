@@ -26,8 +26,8 @@ window.onscroll = function()
 
 let swiper = new Swiper('.swiper', {
     // Optional parameters
-    loop: true,
-    slidesPerView: 3,
+    loop: false,
+    slidesPerView: "auto",
     spaceBetween: 30,
     centeredSlides: true,
     // If we need pagination
