@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deciel Shongo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,8 +24,41 @@
     </section>
     <section id="skills">
         <div class="spacer">Skills</div>
+        <!-- Slider main container -->
+        <div class="swiper" >
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="assets/js-logo.svg" alt="Javascript">
+                    <p>Javascript</p>
+                    <button class="btn-primary">Demo</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/react-logo.svg" alt="Javascript" id="image-react">
+                    <p>React</p>
+                    <button class="btn-primary">Project</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/git-logo.svg" alt="Javascript">
+                    <p>Git</p>
+                    <button class="btn-primary">GitHub</button>
+                </div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                
+            </div>
+            <!-- If we need pagination -->
+<!--             <div class="swiper-pagination"></div>
+ -->            
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            
+            <!-- If we need scrollbar -->
+<!--             <div class="swiper-scrollbar"></div> -->
+        </div>
         <img class="main-background-reverse" src="assets/24.jpg" alt="abstract background">
-
     </section>
     <section id="about-me">
         <div class="spacer">About Me</div>
@@ -46,6 +80,7 @@
             </button>
         </section>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -16,6 +16,8 @@
     --transition-medium: all 0.2s ease-in-out;
     --transition-slow: all 0.3s ease-in-out;
     --transition-slow-motion: all 1.5s ease-in-out;
+    --swiper-navigation-size: 80px;
+    --swiper-navigation-color: var(--color-blue);
 
     
 }
@@ -39,7 +41,7 @@ nav {
     width: 100vw;
     height: 100px;
     background-image: linear-gradient(var(--color-purple),var(--color-blue));
-    z-index: 1;
+    z-index: 3;
     transition: var(--transition-medium);
     box-shadow: 5px 8px 10px rgba(0,0,0,0.2);
 }
@@ -183,6 +185,95 @@ footer {
 .down {
     margin-bottom: 20px;
 }
+
+.swiper, .swiper-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+/*     justify-content: center;
+ */    align-items: center;
+}
+
+.swiper-slide {
+    letter-spacing: -5px;
+    cursor: grab;
+    width: 400px;
+    height: 595px;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius-medium);
+    border-style: none;
+    backdrop-filter: blur(2px);
+    transition: var(--transition-medium);
+    filter: opacity(0.9);
+    transform: scale(0.9);
+    background-color: rgba(5,3,3,0.1);
+    
+}
+
+
+.swiper-slide:hover {
+    filter: none;
+    transform: scale(1.05);
+    border-color: var(--color-blue);
+    border-style: solid;
+}
+
+.swiper-slide img {
+display: block;
+width: 150px;
+height: 150px;
+object-fit: cover;
+}
+
+.swiper-slide p{
+position: relative;
+top: -40px;
+}
+
+.btn-primary {
+    font-family: inherit;
+    width: 350px;
+    height: 100px;
+    border-radius: var(--border-radius-medium);
+    background-image: linear-gradient(to right, var(--color-blue), var(--color-purple));
+    border-top-color: var(--color-blue);
+    border-left-color: var(--color-blue);
+    border-bottom-color: var(--color-purple);
+    border-right-color: var(--color-purple);
+    transition: var(--transition-fast);
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary:active {
+    border-top-color: var(--color-purple);
+    border-left-color: var(--color-purple);
+    border-bottom-color: var(--color-blue-dark);
+    border-right-color: var(--color-blue-dark);
+    transform: scale(0.95);
+}
+
+
+#image-react:hover {
+    transform: rotate(180deg);
+    transition: var(--transition-slow);
+}
+
+
+
+
+
+
+
+
 
 
 
