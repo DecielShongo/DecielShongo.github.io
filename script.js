@@ -1,9 +1,13 @@
 let nav = document.querySelector("nav");
 let prevScrollPos = window.scrollY;
-var skills = document.getElementById('skills');
-var aboutMe = document.getElementById('about-me');
-var contact = document.querySelector('footer')
+let skills = document.getElementById('skills');
+let aboutMe = document.getElementById('about-me');
+let contact = document.querySelector('footer');
+let firstImage = document.getElementById('image-deciel');
+
 setInterval(getScroll, 1000);
+setInterval(()=>{firstImage.className = firstImage.className === "up"? "down" : "up";}, 1500);
+
 
 window.onscroll = function()
 {
@@ -45,11 +49,26 @@ function navigate(event) {
 
 onmousemove = (e) => 
 {
-    console.log("screenY: "+ e.screenY)
-
     if(e.screenY < 120)
     {
         nav.style.top = "0px";
     }
 }
 
+function float(element) 
+{
+/*     let oldTop = parseInt(element.style.top.replace(/px/,""));
+    console.log("hello " + parseInt(element.style.top));
+    let newTop = oldTop + 60;
+    console.log(newTop);
+
+    element.style.top = newTop + "px";
+    element.style.marginBottom = "100px";
+
+    setInterval(() => {  element.style.top = oldTop;
+                        element.style.marginBottom = "-100px";
+                    }, 500); */
+
+    element.className = element.className === "up"? "down" : "up";
+    console.log(element.className);
+}
