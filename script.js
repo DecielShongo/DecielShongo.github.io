@@ -28,24 +28,32 @@ let swiper = new Swiper('.swiper', {
     // Optional parameters
     loop: false,
     slidesPerView: "auto",
-    spaceBetween: 30,
+    spaceBetween: 60,
     centeredSlides: true,
     // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  
+/*     pagination: {
+        el: '.swiper-pagination',
+    }, */
+
     // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+
     },
-  
+
     // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  });
+/*     scrollbar: {
+        el: '.swiper-scrollbar',
+    }, */
+});
+
+/* swiper.on('slideChange', function () {
+    swiper.slides[swiper.activeIndex].style.transform = "scale(1.05)";
+    swiper.slides[swiper.activeIndex + 1].style.transform = "scale(1)";
+    swiper.slides[swiper.activeIndex - 1].style.transform = "scale(1)";
+
+}); */
 
 function getScroll() {
     prevScrollPos = window.scrollY;

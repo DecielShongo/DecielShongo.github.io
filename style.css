@@ -16,6 +16,8 @@
     --transition-medium: all 0.2s ease-in-out;
     --transition-slow: all 0.3s ease-in-out;
     --transition-slow-motion: all 1.5s ease-in-out;
+    --swiper-navigation-size: 80px;
+    --swiper-navigation-color: var(--color-blue);
 
     
 }
@@ -205,16 +207,21 @@ footer {
     justify-content: center;
     align-items: center;
     border-radius: var(--border-radius-medium);
-    border-color: var(--color-blue);
-    border-style: solid;
-    backdrop-filter: blur(4px);
+    border-style: none;
+    backdrop-filter: blur(2px);
     transition: var(--transition-medium);
     filter: opacity(0.9);
+    transform: scale(0.9);
+    background-color: rgba(5,3,3,0.1);
+    
 }
 
-.swiper-slide:hover, .swiper-slide:focus {
+
+.swiper-slide:hover {
     filter: none;
-    transform: scale(1.1);
+    transform: scale(1.05);
+    border-color: var(--color-blue);
+    border-style: solid;
 }
 
 .swiper-slide img {
@@ -251,7 +258,15 @@ top: -40px;
     border-left-color: var(--color-purple);
     border-bottom-color: var(--color-blue-dark);
     border-right-color: var(--color-blue-dark);
+    transform: scale(0.95);
 }
+
+
+#image-react:hover {
+    transform: rotate(180deg);
+    transition: var(--transition-slow);
+}
+
 
 
 
