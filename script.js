@@ -4,6 +4,7 @@ let skills = document.getElementById('skills');
 let aboutMe = document.getElementById('about-me');
 let contact = document.querySelector('footer');
 let firstImage = document.getElementById('image-deciel');
+let hamburger = document.querySelector('.hamburger-menu');
 
 setInterval(getScroll, 1000);
 setInterval(()=>{firstImage.className = firstImage.className === "up"? "down" : "up";}, 1500);
@@ -11,15 +12,21 @@ setInterval(()=>{firstImage.className = firstImage.className === "up"? "down" : 
 
 window.onscroll = function()
 {
-    let currentScrollPos = window.scrollY;
+    let hamburgerDisplay = window.getComputedStyle(hamburger, null).display;
 
-    if (currentScrollPos <= prevScrollPos)
-    {
-        nav.style.top = "0px";
-    }
-    else 
-    {
-        nav.style.top = "-100px";
+    if (hamburgerDisplay === "none") {
+        
+        console.log("bonjour");
+        let currentScrollPos = window.scrollY;
+    
+        if (currentScrollPos <= prevScrollPos)
+        {
+            nav.style.top = "0px";
+        }
+        else 
+        {
+            nav.style.top = "-100px";
+        }
     }
     
 };

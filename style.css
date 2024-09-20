@@ -18,11 +18,16 @@
     --transition-slow-motion: all 1.5s ease-in-out;
     --swiper-navigation-size: 80px;
     --swiper-navigation-color: var(--color-blue);
+    --bar-width: 60px;
+    --bar-height: 8px;
+    --hamburger-gap: 6px;
+    --hamburger-margin: 15px;
+    --hamburger-height: calc(var(--bar-height)*3 + var(--hamburger-gap)*2)
 
     
 }
 
-*{
+*, *::after, *::before{
     box-sizing: border-box;
     color: white;
     font-size: var(--font-large);
@@ -41,6 +46,7 @@ body::-webkit-scrollbar {
 body {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    margin: 0;
 }
 
 
@@ -322,7 +328,83 @@ top: -40px;
 }
 
 
+.hamburger-menu {
+    --x-width: calc(var(--hamburger-height) * 1.414213562);
+    
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    top: var(--hamburger-margin);
+    left: var(--hamburger-margin);
+    z-index: 4;
+    gap: var(--hamburger-gap);
+    cursor: pointer;
+    width: max-content;
+    
+}
 
+.hamburger-menu::after,
+.hamburger-menu::before,
+.hamburger-menu input {
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-image: linear-gradient(to right, var(--color-blue), var(--color-purple));
+    border-radius: var(--border-radius-medium);
+    transition: var(--transition-fast);
+    transform-origin: left center;
+}
+
+.hamburger-menu input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+.hamburger-menu input:checked {
+    background-color: transparent;
+    width: 0;
+}
+
+.hamburger-menu:has(input:checked)::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height)/-2);
+    background-color: var(--color-black);
+    background-image: none;
+}
+
+.hamburger-menu:has(input:checked)::after {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height)/2);
+    background-color: var(--color-black);
+    background-image: none;
+}
+
+.hamburger-menu:has(input:checked) + nav {
+    translate: 0;
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    nav {
+        translate: -100%;
+        background-color: var(--color-black);
+        flex-direction: column;
+        padding-top: calc(var(--hamburger-height) + var(--hamburger-margin));
+        max-width: 300px;
+        height: 100vh;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
 
 
 
