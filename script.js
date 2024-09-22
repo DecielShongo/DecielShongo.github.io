@@ -5,6 +5,7 @@ let aboutMe = document.getElementById('about-me');
 let contact = document.querySelector('footer');
 let firstImage = document.getElementById('image-deciel');
 let hamburger = document.querySelector('.hamburger-menu');
+let mediaMatcher = window.matchMedia("(max-width: 600px)")
 
 setInterval(getScroll, 1000);
 setInterval(()=>{firstImage.className = firstImage.className === "up"? "down" : "up";}, 1500);
@@ -61,6 +62,29 @@ let swiper = new Swiper('.swiper', {
     swiper.slides[swiper.activeIndex - 1].style.transform = "scale(1)";
 
 }); */
+
+// Create a MediaQueryList object
+
+// Call listener function at run time
+changeCards(mediaMatcher);  
+
+// Attach listener function on state changes
+mediaMatcher.addEventListener("change", function() {
+    changeCards(mediaMatcher);
+    console.log("bonjouuuuuuur");  
+});
+
+
+
+function changeCards(mediaMatcher){
+    if(mediaMatcher.matches){
+
+        swiper.slidesPerView = 1;
+        swiper.spaceBetween = 300;
+        swiper.update();
+        swiper.updateSlides();
+    }
+}
 
 function getScroll() {
     prevScrollPos = window.scrollY;
