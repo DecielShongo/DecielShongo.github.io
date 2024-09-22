@@ -418,7 +418,7 @@ top: -40px;
 
     .container {
         gap: 245px;
-        font-size: 82px;
+        font-size: 70px;
     }
 
     #image-deciel {
@@ -456,6 +456,13 @@ top: -40px;
         height: fit-content;
     }
 
+    #header-title {
+        align-self: center;
+    }
+
+    #header-deciel {
+        align-self: center;
+    }
 }
 
 
