@@ -10,6 +10,7 @@
     --font-large: 60px;
     --font-medium: 50px;
     --font-small: 40px;
+    --font-extra-small: 30px;
     --border-radius-medium: 30px;
     --border-radius-small: 5px;
     --transition-fast: all 0.1s ease-in-out;
@@ -20,7 +21,7 @@
     --swiper-navigation-color: var(--color-blue);
     --bar-width: 60px;
     --bar-height: 8px;
-    --hamburger-gap: 6px;
+    --hamburger-gap: 13px;
     --hamburger-margin: 15px;
     --hamburger-height: calc(var(--bar-height)*3 + var(--hamburger-gap)*2)
 
@@ -77,11 +78,7 @@ nav {
     font-family: inherit;
 }
 
-.primary:hover {
-    box-shadow:  -4px -4px 10px var(--color-blue),  5px 5px 10px var(--color-purple);
-    color: var(--color-blue-dark);
-    cursor: pointer;
-}
+
 
 .primary:active 
 {
@@ -219,8 +216,7 @@ footer {
     height: 100vh;
     position: absolute;
     display: flex;
-/*     justify-content: center;
- */    align-items: center;
+    align-items: center;
 }
 
 .swiper-slide {
@@ -245,12 +241,7 @@ footer {
 }
 
 
-.swiper-slide:hover {
-    filter: none;
-    transform: scale(1.05);
-    border-color: var(--color-blue);
-    border-style: solid;
-}
+
 
 .swiper-slide img {
 display: block;
@@ -277,9 +268,7 @@ top: -40px;
     transition: var(--transition-fast);
 }
 
-.btn-primary:hover {
-    transform: scale(1.05);
-}
+
 
 .btn-primary:active {
     border-top-color: var(--color-purple);
@@ -290,10 +279,7 @@ top: -40px;
 }
 
 
-#image-react:hover {
-    transform: rotate(180deg);
-    transition: var(--transition-slow);
-}
+
 
 .about-me {
     width: 100%;
@@ -400,6 +386,29 @@ top: -40px;
     translate: 0;
 }
 
+@media (hover: hover) and (pointer: fine) {
+    .primary:hover {
+        box-shadow:  -4px -4px 10px var(--color-blue),  5px 5px 10px var(--color-purple);
+        color: var(--color-blue-dark);
+        cursor: pointer;
+    }
+
+    #image-react:hover {
+        transform: rotate(180deg);
+        transition: var(--transition-slow);
+    }
+
+    .swiper-slide:hover {
+        filter: none;
+        transform: scale(1.05);
+        border-color: var(--color-blue);
+        border-style: solid;
+    }
+
+    .btn-primary:hover {
+        transform: scale(1.05);
+    }
+}
 
 @media only screen and (max-width: 600px) {
     
@@ -417,8 +426,8 @@ top: -40px;
     }
 
     .container {
-        gap: 245px;
-        font-size: 70px;
+        gap: 285px;
+        font-size: 60px;
     }
 
     #image-deciel {
@@ -427,8 +436,12 @@ top: -40px;
     }
 
     .swiper-slide {
-        width: 350px;
-        height: 500px;
+/*         width: 350px;
+        height: 500px; */
+        scale: 0.8;
+        filter: opacity(1);
+        border-color: var(--color-blue);
+        border-style: solid;
     }
 
     .about-me {
@@ -445,6 +458,8 @@ top: -40px;
         height: 85vh;
         text-align: center;
         align-items: center;
+        justify-content: center;
+        gap: 40px;
         padding: 0;
     }
 
@@ -454,14 +469,22 @@ top: -40px;
 
     .about-me-text p {
         height: fit-content;
+        font-size: var(--font-extra-small);
     }
 
     #header-title {
         align-self: center;
+        margin-right: 0;
     }
 
     #header-deciel {
         align-self: center;
+        margin-left: 0;
+    }
+
+    #contact button {
+        width: 100px;
+        height: 100px;
     }
 }
 
