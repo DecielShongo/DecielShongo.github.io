@@ -35,9 +35,10 @@ window.onscroll = function()
 let swiper = new Swiper('.swiper', {
     // Optional parameters
     loop: false,
-    slidesPerView: "auto",
-/*     spaceBetween: 60, */
-    centeredSlides: true,
+
+    slidesPerView: 1,
+    centeredSlides: false,
+
     // If we need pagination
 /*     pagination: {
         el: '.swiper-pagination',
@@ -52,8 +53,10 @@ let swiper = new Swiper('.swiper', {
     breakpoints: {
         // when window width is <= 499px
         600: {
-            slidesPerView: 1,
-            centeredSlides: false
+
+            slidesPerView: "auto",
+            /*     spaceBetween: 60, */
+                centeredSlides: true,
         }
     }
     // And if we need scrollbar
