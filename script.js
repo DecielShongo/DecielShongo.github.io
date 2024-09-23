@@ -36,7 +36,7 @@ let swiper = new Swiper('.swiper', {
     // Optional parameters
     loop: false,
     slidesPerView: "auto",
-    spaceBetween: 60,
+/*     spaceBetween: 60, */
     centeredSlides: true,
     // If we need pagination
 /*     pagination: {
@@ -49,7 +49,13 @@ let swiper = new Swiper('.swiper', {
         prevEl: '.swiper-button-prev',
 
     },
-
+    breakpoints: {
+        // when window width is <= 499px
+        600: {
+            slidesPerView: 1,
+            centeredSlides: false
+        }
+    }
     // And if we need scrollbar
 /*     scrollbar: {
         el: '.swiper-scrollbar',
