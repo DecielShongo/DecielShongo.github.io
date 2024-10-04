@@ -46,6 +46,10 @@ nav {
     box-shadow: 5px 8px 10px rgba(0,0,0,0.2);
 }
 
+a {
+    text-decoration: none;
+}
+
 .primary {
     border-radius: var(--border-radius-small);
     font-size: var(--font-small);
@@ -228,7 +232,7 @@ footer {
 display: block;
 width: 150px;
 height: 150px;
-object-fit: cover;
+object-fit: contain;
 }
 
 .swiper-slide p{
